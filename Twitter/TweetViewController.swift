@@ -11,6 +11,7 @@ import UIKit
 class TweetViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var tweetText: UITextView!
+    @IBOutlet weak var charText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,8 @@ class TweetViewController: UIViewController, UITextViewDelegate {
         // Construct what the new text would be if we allowed the user's latest edit
         let newText = NSString(string: textView.text!).replacingCharacters(in: range, with: text)
         
-        // TODO: Update Character Count Label
+        // Update Character Count Label
+        charText.text = "\(newText.count)/140"
         
         // The new text should be allowed? True/False
         return newText.count < characterLimit

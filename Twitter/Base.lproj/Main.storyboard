@@ -218,6 +218,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="charText" destination="2EZ-Rx-oL3" id="3AN-EJ-1Lg"/>
                         <outlet property="tweetText" destination="S7l-yW-7BK" id="Wl4-7F-QnJ"/>
                     </connections>
                 </viewController>
